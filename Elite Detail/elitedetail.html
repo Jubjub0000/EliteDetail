@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Detail | Mobile Car Detailing Boerne, TX</title>
+  <link rel="icon" href="faviconreal-removebg-preview.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #1f2937;
+      color: #fff;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #111827;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #2563eb;
+    }
+
+    section {
+      display: none;
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #1f2937;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta button {
+      padding: 0.8rem 2rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta button:hover {
+      background-color: #1e40af;
+    }
+
+    .subscribe-box {
+      background-color: #e2e8f0;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .subscribe-box h3 {
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .subscribe-box input[type="email"] {
+      padding: 0.7rem;
+      width: 250px;
+      max-width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 0.5rem;
+      background-color: white;
+      color: #1f2937;
+    }
+
+    .subscribe-box button {
+      padding: 0.7rem 1.2rem;
+      background-color: #1f2937;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .subscribe-box button:hover {
+      background-color: #111827;
+    }
+
+    footer {
+      text-align: center;
+      background: #1f2937;
+      color: #fff;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .package-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+    padding: 0 1rem;
+  }
+
+  .plan {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 250px;
+    min-width: 280px;
+  }
+
+  .plan h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+
+  .plan ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+
+  .plan ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .plan ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .package-plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Elite Detail</h1>
+    <p>Boerne, TX’s Premier Mobile Car Detailing Service</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('about')">About Us</a>
+    <a href="#" onclick="showTab('rates')">Rates</a>
+    <a href="#" onclick="showTab('contact')">Contact Us</a>
+  </nav>
+
+<section id="home" class="active">
+  <div class="cta">
+    <h2 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Ride Clean. Ride Elite.</h2>
+    <p style="max-width: 700px; margin: 0 auto;">Mobile detailing delivered with precision. Book now and experience the Elite standard from the comfort of your driveway.</p>
+    <div style="margin-top: 1.5rem;">
+      <a style="float: none" id="Setmore_button_iframe" href="https://elitedetail11.setmore.com">
+        <img border="none" src="https://assets.setmore.com/setmore/images/2.0/Settings/book-now-black.svg" alt="Book with Elite Detail" />
+      </a>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 4rem; margin: 3rem auto; max-width: 1000px; padding: 0 1rem;">
+    
+    <!-- SERVICE BLOCK -->
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <img src="fulldetail.jpeg" alt="Full Detail" style="flex: 0 0 280px; width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover;">
+      <div style="flex: 1;">
+        <h3 style="margin-bottom: 0.5rem;">Full Detail</h3>
+        <p style="line-height: 1.6;">Everything in one package — interior, exterior, tires, wax, and shampoo. A complete transformation, start to finish.</p>
+      </div>
+    </div>
+
+    <!-- SERVICE BLOCK -->
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap-reverse;">
+      <div style="flex: 1;">
+        <h3 style="margin-bottom: 0.5rem;">Vacuum & Steam</h3>
+        <p style="line-height: 1.6;">Sanitize your interior with powerful steam and full vacuuming — removing debris and bacteria from every surface and crevice.</p>
+      </div>
+      <img src="carsteaming.webp" alt="Vacuum & Steam" style="flex: 0 0 280px; width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover;">
+    </div>
+
+    <!-- SERVICE BLOCK -->
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <img src="shampooseat.jpeg" alt="Interior Shampoo" style="flex: 0 0 280px; width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover;">
+      <div style="flex: 1;">
+        <h3 style="margin-bottom: 0.5rem;">Interior Shampoo</h3>
+        <p style="line-height: 1.6;">Revive your seats and carpets with a deep shampoo that lifts stains, removes grime, and restores that new-car feeling.</p>
+      </div>
+    </div>
+
+    <!-- SERVICE BLOCK -->
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap-reverse;">
+      <div style="flex: 1;">
+        <h3 style="margin-bottom: 0.5rem;">Tire & Wheel Clean</h3>
+        <p style="line-height: 1.6;">Cut through brake dust, dirt, and grime to restore that factory-fresh wheel look, finished with tire shine for a bold polish.</p>
+      </div>
+      <img src="tiredetail.webp" alt="Tire & Wheel Clean" style="flex: 0 0 280px; width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover;">
+    </div>
+
+    <!-- SERVICE BLOCK -->
+    <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
+      <img src="exteriorwash.jpg" alt="Exterior Wash & Wax" style="flex: 0 0 280px; width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover;">
+      <div style="flex: 1;">
+        <h3 style="margin-bottom: 0.5rem;">Exterior Wash & Wax</h3>
+        <p style="line-height: 1.6;">Protect and shine your vehicle’s exterior with a hand-applied wax that leaves behind a glossy, weather-resistant finish.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="about">
+  <div style="max-width: 900px; margin: 2rem auto; padding: 0 1rem;">
+    <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">About Us</h2>
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 2.5rem;">
+      Elite Detail is Boerne’s premier mobile car detailing service, delivering high-quality, professional-grade clean directly to your driveway. Whether it’s your daily driver or a weekend cruiser, we’re committed to making your vehicle shine with unmatched attention to detail.
+    </p>
+
+<div style="background-color: white; padding: 2.5rem 2rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); margin-bottom: 3rem;">
+      <div style="margin-bottom: 2.5rem; text-align: center;">
+        <h3 style="font-size: 1.5rem; color: #1f2937; margin-bottom: 0.5rem;">Our Mission</h3>
+        <p style="line-height: 1.7; max-width: 700px; margin: 0 auto;">To deliver the highest quality mobile detailing service in Boerne, ensuring every customer drives away with a spotless vehicle and a smile.</p>
+      </div>
+
+      <div style="margin-bottom: 2.5rem; text-align: center;">
+        <h3 style="font-size: 1.5rem; color: #1f2937; margin-bottom: 0.5rem;">Our Vision</h3>
+        <p style="line-height: 1.7; max-width: 700px; margin: 0 auto;">To be the most trusted and recognized name in mobile detailing throughout the Hill Country by combining professionalism with unmatched service.</p>
+      </div>
+
+      <div style="text-align: center;">
+        <h3 style="font-size: 1.5rem; color: #1f2937; margin-bottom: 0.5rem;">Our Values</h3>
+        <ul style="list-style: none; padding-left: 0; line-height: 1.8; max-width: 700px; margin: 0 auto;">
+          <li>✔️ Integrity in every detail</li>
+          <li>✔️ Consistent excellence</li>
+          <li>✔️ Customer-first mindset</li>
+          <li>✔️ Commitment to community</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center;">
+      <p style="font-size: 1.05rem; margin-bottom: 1rem;">Have a question or ready to schedule your detail? We'd love to hear from you.</p>
+      <button onclick="contactUs()" style="padding: 0.9rem 2rem; background-color: #2563eb; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer;">
+        Contact Us Today
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <section id="rates">
+  <h2 style="text-align: center;">Package Features</h2>
+  <div class="package-plans">
+    <div class="plan">
+      <h3>Standard</h3>
+      <ul>
+        <li>Pressure Washer Soap Cleaning</li>
+        <li>Deep Wheel & Tire Cleaning</li>
+        <li>Full Vacuum</li>
+        <li>Stain Removing</li>
+        <li>Steam Cleaning</li>
+        <li>Interior Deep Clean</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Deluxe</h3>
+      <ul>
+        <li>Everything in Standard</li>
+        <li>Tire Shine</li>
+        <li>Interior UV Protection</li>
+        <li>Interior Shine</li>
+        <li>Exterior Spray Wax (1-2 Month Protection)</li>
+      </ul>
+    </div>
+    <div class="plan">
+      <h3>Premium</h3>
+      <ul>
+        <li>Everything in Deluxe</li>
+        <li>Full Interior Shampoo</li>
+        <li>Leather Conditioning</li>
+        <li>Exterior Sealant (3-6 Month Protection)</li>
+        <li>Pet Hair no extra charge</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="max-width: 850px; margin: 2rem auto; padding: 0 1rem;">
+    <h3 style="margin-bottom: 2rem; margin-top: 2rem; color: #1f2937;">Price Breakdown by Vehicle</h3>
+    <table style="
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+    ">
+      <thead style="background-color: #1f2937; color: white;">
+        <tr>
+          <th style="padding: 1rem; text-align: left;">Vehicle Type</th>
+          <th style="padding: 1rem;">Standard</th>
+          <th style="padding: 1rem;">Deluxe</th>
+          <th style="padding: 1rem;">Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 1rem;">Sedan</td>
+          <td style="text-align: center;">$110</td>
+          <td style="text-align: center;">$120</td>
+          <td style="text-align: center;">$130</td>
+        </tr>
+        <tr style="background-color: #f9fafb;">
+          <td style="padding: 1rem;">Crossover</td>
+          <td style="text-align: center;">$130</td>
+          <td style="text-align: center;">$140</td>
+          <td style="text-align: center;">$150</td>
+        </tr>
+        <tr>
+          <td style="padding: 1rem;">Truck / SUV</td>
+          <td style="text-align: center;">$140</td>
+          <td style="text-align: center;">$150</td>
+          <td style="text-align: center;">$160</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 1rem;">Note: Pet hair and specialty services available upon request.</p>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:elitedetail12@gmail.com">elitedetail12@gmail.com</a></p>
+    <p>Phone: (210) 459-9148</p>
+    <p>Serving Boerne, TX and surrounding areas</p>
+  </section>
+
+  <div class="subscribe-box">
+    <h3>Stay in the loop – Get our latest deals, promos & events!</h3>
+    <input type="email" placeholder="Enter your email" />
+    <button>Subscribe</button>
+  </div>
+
+  <footer>
+    &copy; 2025 Elite Detail | Boerne, TX | Mobile Auto Detailing
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    function contactUs() {
+      window.location.href = "mailto:elitedetail12@gmail.com?subject=Detailing%20Booking";
+    }
+  </script>
+</body>
+</html>
